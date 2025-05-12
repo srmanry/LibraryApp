@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mylibrary/feature/intro/view/splash_screen_view.dart';
 
 import 'feature/dashbord/view/dashobord_screen.dart';
 
@@ -49,7 +50,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home:DashBoardScreenView(),
-    );
+    home: SplashScreen(),
+      // home:DashBoardScreenView(),
+     );
   }
 }
