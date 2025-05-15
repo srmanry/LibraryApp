@@ -16,6 +16,8 @@ class SignUpScreenView extends StatelessWidget {
       body: SingleChildScrollView(child: Padding(
         padding: const EdgeInsets.all(Dimensions.fifTeen),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text("Join E Book Library",style: textBold,),
             const Text("Read and Books"),
@@ -38,7 +40,7 @@ class SignUpScreenView extends StatelessWidget {
               Text("Sign in",style: textRegular.copyWith(color: appColor),),
             ],),
 
-          const Spacer(),
+
             Padding(
               padding: const EdgeInsets.symmetric(vertical: Dimensions.twenty),
               child: CustomBottom(name:"Sign up",bottomColor: appColor,),

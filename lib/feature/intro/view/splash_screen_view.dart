@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mylibrary/feature/dashbord/view/dashobord_screen.dart';
+
+import 'package:mylibrary/feature/intro/view/welcome_screen.dart';
 
 
 
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
       const Duration(seconds: 5),
           () {
-        Get.to(() => DashBoardScreenView());
+        Get.to(() =>WelcomeScreenView ());
       },
     );
   }
@@ -45,15 +46,10 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Image.asset(
-                      "assets/images/school.png",
-                      fit: BoxFit.cover,
-                      height: 150,
-                    )),
+                Image(image: AssetImage("assets/images/school.png",),height: 100,),
+
                 const SizedBox(height: 10,),
-                const Text("My Library",style: TextStyle(  fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green,fontFamily: "FL Mahfuj Brush",   ), ),
+                Text("My Library",style: TextStyle(  fontSize: 24, fontWeight: FontWeight.bold, color: Color(0xff00A28D),fontFamily: "FL Mahfuj Brush",   ), ),
               ],
             ),
           ),
