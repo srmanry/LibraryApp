@@ -34,21 +34,10 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           
           color: const Color(0xFFF3F3F3),
-         // border: Border.all(color: Colors.red),
-        //color: const Color(0xFFFFFFFF),
-        
-          // boxShadow: const [
-          //   BoxShadow(
-          //       color: Colors.red,
-          //       blurRadius: 1,
 
-          //      // spreadRadius: 1
-          //       ),
-                
-          // ]
         ),
       child: TextFormField(
-        // obscureText: obscureText,
+         obscureText: obscureText??false,
         controller: controller,
         keyboardType: textInputType,
         decoration: InputDecoration(

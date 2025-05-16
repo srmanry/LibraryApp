@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mylibrary/common/botton.dart';
-import 'package:mylibrary/feature/auth/view/login_screen_veiw.dart';
-import 'package:mylibrary/feature/auth/view/sign_up_screen.dart';
+
+import 'package:mylibrary/feature/auth/view/sigh_up_screen.dart';
+import 'package:mylibrary/feature/auth/view/sign_in_screen.dart';
+import 'package:mylibrary/feature/dashbord/view/dashobord_screen.dart';
+
 
 class WelcomeScreenView extends StatelessWidget {
   const WelcomeScreenView({super.key});
@@ -27,14 +30,22 @@ class WelcomeScreenView extends StatelessWidget {
             CustomBottom(
             textColor: Colors.black,
             bottomColor: Colors.green,name: "Sign up",onTap: (){
-              Get.to(SignUpScreenView());
+              Get.to(SighUpScreen());
+            },),
+            SizedBox(height: 10,),
+
+
+            CustomBottom(
+              textColor: Colors.black,
+              bottomColor: Colors.green,name: "dashboard",onTap: (){
+              Get.to(DashBoardScreenView());
             },),
             SizedBox(height: 10,),
 
             CustomBottom(
               bottomColor: Colors.green,
               name: "Sign in",onTap: (){
-              Get.to(LoginScreenView());
+              Get.to(SignInScreenView());
             },)
           ],
         ),

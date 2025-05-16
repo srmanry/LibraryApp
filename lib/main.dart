@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mylibrary/feature/intro/view/splash_screen_view.dart';
 
@@ -42,16 +43,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
+    return ScreenUtilInit(
+      builder: (_,child){
+        return GetMaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      debugShowCheckedModeBanner: false,
-    home: SplashScreen(),
-      // home:DashBoardScreenView(),
-     );
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          debugShowCheckedModeBanner: false,
+          home: SplashScreen(),
+          // home:DashBoardScreenView(),
+        );
+      }
+    );
   }
 }

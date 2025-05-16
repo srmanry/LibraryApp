@@ -8,6 +8,7 @@ import 'package:mylibrary/util/styles.dart';
 
 
 import 'book_uplode_screen.dart';
+import 'book_uplode_view.dart';
 import 'yourbooks_screen.dart';
 
 class ProfileScreenView extends StatelessWidget {
@@ -31,7 +32,7 @@ class ProfileScreenView extends StatelessWidget {
           Text("gmail@gmail.com",style: textMedium.copyWith(fontSize: 15),),
           const SizedBox(height: 20,),
 
-          ProfileCardWidget(name: "Publish new Book",onTap: (){ Get.to(BookUplodeScreenView()); },),
+          ProfileCardWidget(name: "Publish new Book",onTap: (){ Get.to(BookUploadScreenView()); },),
           ProfileCardWidget(name: "View your Books",onTap: (){Get.to(YourBooksScreen());},),
           ProfileCardWidget(name: "Privacy Policy",),
           ProfileCardWidget(name: "Contract",),
